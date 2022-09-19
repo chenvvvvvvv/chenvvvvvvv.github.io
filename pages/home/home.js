@@ -69,8 +69,11 @@ const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 document.body.appendChild(canvas);
 // Set canvas to the size of the viewable window.
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+canvas.width = document.body.clientWidth;
+canvas.height = document.body.clientHeight;
+
 // Build three waves with slightly different settings.
 let waves = [];
 waves.push(new Wave({
